@@ -69,7 +69,7 @@ GROUP BY visit_id,attraction_id, ride_time, wait_minutes, satisfaction_rating,ph
 HAVING COUNT(*)>1
 ORDER BY dup DESC;
 
---2 duplicates in visit_id's 4,12,18,19,22,24,34 and 37
+--2 duplicates in visit_id's row 4,12,18,19,22,24,34 and 37
 
 --Q6: Null audit for columns used for analysis
 
