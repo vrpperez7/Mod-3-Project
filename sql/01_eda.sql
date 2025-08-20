@@ -47,8 +47,8 @@ SELECT
 FROM fact_ride_events
 GROUP BY minutes_waited
 ORDER BY frequency_of_wait DESC
-  
---WORK ON THIS STILL
+
+  --most values come from NULL
 
 
 --Q4: Average Satisfaction rating by attraction name and category
@@ -58,6 +58,8 @@ FROM dim_attraction da
 JOIN fact_ride_events fde ON fde.attraction_id = da.attraction_id
 GROUP BY da.attraction_name, da.category
 ORDER BY rating DESC
+  --highest rating is dragon drop at 3.235
+  --lowest rating is pirate splash at 2.5
 
 --Q5: Check for exact duplicates on fact_ride_events rows
 
@@ -67,17 +69,17 @@ GROUP BY visit_id,attraction_id, ride_time, wait_minutes, satisfaction_rating,ph
 HAVING COUNT(*)>1
 ORDER BY dup DESC;
 
-  --no duplicated reported
+--2 duplicates in visit_id's 4,12,18,19,22,24,34 and 37
 
 --Q6: Null audit for columns used for analysis
 
   --72 records of wait_minutes is null
-SELECT COUNT(*)
+SELECT COUNT(*) as null_values
 FROM fact_ride_events
 WHERE wait_minutes IS NULL
 
   --20 values between null in total_spend_cents and n/a values
-SELECT COUNT(*)
+SELECT COUNT(*) as null_values
 FROM fact_visits
 WHERE total_spend_cents IS 'n/a' OR total_spend_cents IS NULL
 
