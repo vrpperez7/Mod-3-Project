@@ -25,5 +25,18 @@ Marketing Director </br>
 - Interest in ticket types, promotions, and seasonal campaigns that attract guests who purchase the extras (food,merchandise,premium experiences) </br>
 - Early campaign says discount packages drive up attendance, but people price-sensitive guests
 
+## The Database and Schema:
+
+### We are working with a Star Schema 
+A star schema is when a central fact table references multiple dimensions </br>
+
+A dimension table contains all unique instances, is usually is very verbose, and is usually grouped. </br>
+
+A fact table usually refers to events in the real world, contains measures for the foreign keys associated to the primary key in a dimension table, and sometimes includes date/time stamps. </br>
+
+Benefits Include:
+- Easier to merge tables when fact table is common between dimension tables
+- Easier to read
+
 
 
