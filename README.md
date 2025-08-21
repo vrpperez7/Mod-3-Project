@@ -5,7 +5,7 @@
 
 # Business Problem:
 
-## My client, Supernova Theme Park, has hired me to do a cross-departamental plan for the Operations and Marketing team who would like strategies for the next quarter. The goals are to promote operational efficiency, the guest experience, and targeted marketing to improve guest satisfaction and revenue. They have provided me with Supernova Theme Park’s date to analyze and create insights.
+### My client, Supernova Theme Park, has hired me to do a cross-departamental plan for the Operations and Marketing team who would like strategies for the next quarter. The goals are to promote operational efficiency, the guest experience, and targeted marketing to improve guest satisfaction and revenue. They have provided me with Supernova Theme Park’s date to analyze and create insights.
 
 ## My stakeholders are:
 
