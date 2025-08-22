@@ -1,7 +1,5 @@
 # Theme Park Analysis
 
-![rollercoaster](https://github.com/user-attachments/assets/c88a3037-8f9f-4e0d-adf3-ee3922b75d82)
-
 ### by Vincent Perez
 
 # Business Problem:
