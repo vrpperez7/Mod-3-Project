@@ -1,5 +1,3 @@
-# Mod-3-Project
-
 # Theme Park Analysis
 ### by Vincent Perez
 
@@ -10,32 +8,55 @@
 ## My stakeholders are:
 
 ### <ins>Primary Stakeholder</ins>
-Park General Manager </br>
+Park General Manager's Concerns Are </br>
 - Unhappy with previous two quarters </br>
 - Upset with fluctuating revenue streams </br>
 - Uneven guest satisfaction scores </br>
 
 ### <ins>Supporting Stakeholders</ins> </br>
-Operations Director </br>
-- Inconsistent ride availability because of maintenance </br>
-- Overcrowding times </br>
-- Long wait times for popular attractions </br>
+Operations Director Concerns Incluce </br>
+- Inconsistent ride availability because of maintenance. </br>
+- Overcrowding times. </br>
+- Long wait times for popular attractions. </br>
 
-Marketing Director </br>
-- Interest in ticket types, promotions, and seasonal campaigns that attract guests who purchase the extras (food,merchandise,premium experiences) </br>
-- Early campaign says discount packages drive up attendance, but people price-sensitive guests
+Marketing Director's Concerns </br>
+- Early campaigns say discount packages drive up attendance of price-sensitive guests.
+
+# So Let's Approach Our Scenario!
 
 ## The Database and Schema:
 
 ### We are working with a Star Schema 
-A star schema is when a central fact table references multiple dimensions </br>
+Put simply, a __star schema__ is when a central fact table references multiple dimensions tables. </br>
 
-A dimension table contains all unique instances, is usually is very verbose, and is usually grouped. </br>
+A _dimension table_ contains all unique instances, is usually is very verbose, and is usually grouped. </br>
 
-A fact table usually refers to events in the real world, contains measures for the foreign keys associated to the primary key in a dimension table, and sometimes includes date/time stamps. </br>
+A _fact table_ usually refers to events in the real world, contains measures for the foreign keys associated to the primary key in a dimension table, and sometimes includes date/time stamps. </br>
 
-Benefits Include:
+Some Benefits Are:
 - Easier to merge tables when fact table is common between dimension tables
 - Easier to read
+
+### Our Database has 7 Tables
+
+__4 Dimension Tables:__ </br>
+- dim_attraction : includes all unique attractions at Supernova
+- dim_date : includes all unique dates of our database
+- dim_guest : includes all guests and their contact information
+- dim_ticket : includes all ticket types and their pricing
+__3 Fact Tables:__ </br>
+- fact_purchases : all instances of guest purchases made during a visit at Supernova
+- fact_ride_events : all details of rides during a visit
+- fact_visits : all separate visits a guest has done
+
+## EDA(SQL)
+
+To find insights for all three of our stakeholders, I did some aggregations on what seemed to be important. </br>
+
+I looked to aggregate the mean of satisfaction_rating per attraction_name by utilizing the dim_attraction table and joining the fact_ride_events table. </br>
+
+
+
+This aggregation showed me a lot about how customers felt about each attraction.
 
 
