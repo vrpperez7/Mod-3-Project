@@ -83,11 +83,10 @@ Utilizing my new column allowed me to see the top 5 most frequently rated were u
 ## Full Analysis (Utilizing JOINS, CTES, and WINDOW FUNCTIONS)
 
 The original aggregation of satisfaction_rating showed me a lot about how customers felt for the water attractions. </br>
-Interestingly enough, the water category had two of the lowest satisfaction_ratings, so I delved deeper into the categories and found out more about waiting times. </br>
+Interestingly enough, the water category had two of the lowest satisfaction_ratings, so I dove deeper into the categories and found out more about waiting times. </br>
 
+<img width="539" height="125" alt="Screenshot 2025-08-22 at 5 07 38 PM" src="https://github.com/user-attachments/assets/6106ff5c-ad2d-4695-82f9-709ee29b3b50" />
 <img width="414" height="151" alt="Screenshot 2025-08-22 at 3 19 08 PM" src="https://github.com/user-attachments/assets/77e64cf4-dec9-4860-85dd-170cc7c00e4a" />
-
-Graphs
 
 Not only did the Water category of rides have the highest amount of visits between all ride categories (25), it also had the highest average wait time per ride (49.12) and lowest average rating (2.72). This could be a cause for concern to our **Operations Director.** </br>
 
@@ -95,6 +94,7 @@ To further inspect transactions and promotional offers, I looked in the fact_pur
 Joining our purchase table with our fact_visits table in a CTE allowed for matching of visit_id's and pinpoint how many purchases were made by guests with promotional offers. I then grouped and found more insights of how many purchases were made by each promotional offer category. </br>
 
 <img width="390" height="176" alt="Screenshot 2025-08-22 at 4 36 05 PM" src="https://github.com/user-attachments/assets/0222749a-1fe9-4f75-b6c2-e6d1b67aa5a1" />
+<img width="256" height="125" alt="Screenshot 2025-08-22 at 5 03 09 PM" src="https://github.com/user-attachments/assets/42072b4a-5133-4bce-b85b-1db1b1f16254" />
 
 This goes against the early campaigns mentioned by our **Marketing Director,** although promotions are driving up attendance, they're also make the most purchases compared to those without a promotional offer.
 
