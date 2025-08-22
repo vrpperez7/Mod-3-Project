@@ -67,14 +67,14 @@ I was able to find out that, of the guests that we had records of utilizing/not 
 
 ## FEATURE ENGINEERING
 
-I created a column to categorize satisfaction_rating called satisfaction_score where:
+I created a column to categorize satisfaction_rating called satisfaction_score, making bins where:
 - satisfaction_rating = 5 is 'Satisfied'
 - satisfaction_rating = 4 is 'Moderately Satisfied'
 - satisfaction_rating < 4 is 'Unsatisfied'
 
 This allowed me to make a count for attraction ride categories and further provide insight of how unhappy customers were. </br>
 
-
+<img width="289" height="185" alt="Screenshot 2025-08-22 at 3 55 49 PM" src="https://github.com/user-attachments/assets/68f83ab2-9648-4224-99f4-6462bf0c4b49" />
 
 Utilizing my new column allowed me to see the top 5 most frequently rated were unsatisfied/moderately satisfied. Of which, two were of the 'Water' category.
 
