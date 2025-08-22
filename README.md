@@ -68,6 +68,6 @@ Not only did the Water category of rides have the highest amount of visits betwe
 
 Then, I checked to see the frequency of our total guests (47) that utilized promotional codes.
 
-
+<img width="205" height="125" alt="Screenshot 2025-08-22 at 3 29 07 PM" src="https://github.com/user-attachments/assets/2f0592db-7db5-4fd7-be3f-e1e987466e42" />
 
 I was able to find out that, of the guests that we had records of utilizing/not utilizing codes (40/47), most of them did use promotional offers (33). This supports our **Marketing Director's** claim of "Promotional Codes drive attendance", we'll check further of how this impacts Supernova monetarily.
