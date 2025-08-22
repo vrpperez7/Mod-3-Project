@@ -53,10 +53,16 @@ __3 Fact Tables:__ </br>
 
 To find insights for all three of our stakeholders, I did some aggregations on what seemed to be important. </br>
 
+To tackle the **Park General Manager's** concern of rating scores, I checked for satisfaction_ratings. </br>
+
 I looked to aggregate the mean of satisfaction_rating per attraction_name by utilizing the dim_attraction table and joining the fact_ride_events table. </br>
 
 <img width="286" height="211" alt="Screenshot 2025-08-22 at 3 01 46 PM" src="https://github.com/user-attachments/assets/fd4b6929-ea10-4c9f-9fa4-729c7177c905" />
 
-This aggregation showed me a lot about how customers felt about each attraction.
+This aggregation showed me a lot about how customers felt for each attraction. </br>
+Interestingly enough, the water category had two of the lowest satisfaction_ratings, so I delved deeper into the categories and found out more about waiting times. </br>
 
+
+
+Not only did the Water category of rides have the highest amount of visits between all ride categories, it also had the highest average wait time per ride and lowest average rating. This could be a cause for concern to our **Operations Director**
 
