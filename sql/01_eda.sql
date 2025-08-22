@@ -20,11 +20,12 @@ SELECT 'dim_guest' AS table_name,
 
 --Q1: Date range of visit_date; number of distinct dates; visits per date
 
-SELECT DISTINCT visit_date as dates, 
-  COUNT(visit_date) as count_of_date
-FROM fact_visits
+SELECT DISTINCT fv.visit_date as dates,  dt.day_name as day_of_week,
+  COUNT(fv.visit_date) as total_visits
+FROM fact_visits fv
+JOIN dim_date dt ON dt.date_id = fv.date_id
 GROUP BY dates
-ORDER BY count_of_date DESC
+ORDER BY total_visits DESC
 
 --Q2: Visits by ticket type name
 
@@ -58,8 +59,8 @@ FROM dim_attraction da
 JOIN fact_ride_events fde ON fde.attraction_id = da.attraction_id
 GROUP BY da.attraction_name, da.category
 ORDER BY rating DESC
-  --highest rating is dragon drop at 3.235
-  --lowest rating is pirate splash at 2.5
+  --highest rating is dragon drop at 3.313
+  --lowest rating is wild rapids at 2.625
 
 --Q5: Check for exact duplicates on fact_ride_events rows
 
@@ -69,11 +70,12 @@ GROUP BY visit_id,attraction_id, ride_time, wait_minutes, satisfaction_rating,ph
 HAVING COUNT(*)>1
 ORDER BY dup DESC;
 
---2 duplicates in visit_id's row 4,12,18,19,22,24,34 and 37
+--2 duplicates in visit_id's 4,12,18,19,22,24,34 and 37
 
 --Q6: Null audit for columns used for analysis
 
   --72 records of wait_minutes is null
+  --67 after removing duplicates
 SELECT COUNT(*) as null_values
 FROM fact_ride_events
 WHERE wait_minutes IS NULL
@@ -85,8 +87,26 @@ WHERE total_spend_cents IS 'n/a' OR total_spend_cents IS NULL
 
 --Q7: Average party size by day of week
 
-SELECT dd.day_name, count(dd.day_name) as count_of_appearances, AVG(fv.party_size) as avgparty_size, SUM(fv.party_size) as sumparty_size
+SELECT dd.day_name, count(dd.day_name) as count_of_appearances, ROUND(AVG(fv.party_size),3) as avgparty_size, SUM(fv.party_size) as sumparty_size
 FROM fact_visits fv
 JOIN dim_date dd ON fv.date_id = dd.date_id
 GROUP BY dd.day_name
 ORDER BY avgparty_size DESC
+
+
+--EDA for amount_spent per promotional offer
+
+  --joining both tables with monetary spend
+WITH purchases AS(  
+  SELECT *
+  FROM fact_visits fv
+  LEFT JOIN fact_purchases fp ON fv.visit_id = fp.visit_id
+)
+  --adding amount_cents_clean to spend_cents_clean
+  SELECT promotion_code, count(guest_id) as total_guests,SUM(amount_cents_clean) + SUM(spend_cents_clean) as total_spent,
+  (SUM(amount_cents_clean) + SUM(spend_cents_clean))/count(guest_id) as spent_per_customer
+  FROM purchases
+  WHERE promotion_code IS NOT NULL
+  GROUP BY promotion_code
+
+  --those without a promotional_code spent more than SUMMER25 and VIPDAY customers

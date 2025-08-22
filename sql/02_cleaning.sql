@@ -104,6 +104,18 @@ UPDATE dim_guest
 SET home_state = 'NY'
 WHERE home_state = 'NEW YORK'
 
+--changing where attraction_id is 6 to 1 (same attraction but added twice)
+
+UPDATE fact_ride_events
+SET attraction_id = '1'
+WHERE attraction_id = '6'
+
+--changing where attraction_id is 7 to 2 (same attraction but added twice)
+
+UPDATE fact_ride_events
+SET attraction_id = '2'
+WHERE attraction_id = '7'
+  
 --removing duplicate rows in fact_ride_event (8 rows have the same values in all rows)
 DELETE FROM fact_ride_events
 WHERE rowid NOT IN (
