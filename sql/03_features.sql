@@ -20,15 +20,7 @@ SET
   ELSE '61+ mins'
   END
 
-/*
-  COUNT(*) as frequency_of_wait,
-  AVG(satisfaction_rating) as average_rating
-FROM fact_ride_events
-GROUP BY minutes_waited
-ORDER BY average_rating DESC
-*/
 
-  --good to highlight what is the usual time people wait for their rides
   --able to see if satisfaction score is worse for those that waited 61+ mins
 
 -- 3) calculating stay_minutes from entry to exit
@@ -48,24 +40,7 @@ SET stay_minutes = ROUND(stay_minutes)
       --if we know how long people stay at the park, we can compare it to previous weeks
       --shows either engagement or need to change wait times for rides
   
--- 4) column for made purchase or did not make purchase by checking if primary key (purchase_id) is null.
-/*
-WITH purchases AS(  
-  SELECT *,
-  CASE WHEN fp.purchase_id IS NULL THEN 'No Purchase'
-  ELSE 'Made Purchase'
-  END AS purchase_or_no
-  FROM fact_visits fv
-  INNER JOIN fact_purchases fp ON fv.visit_id = fp.visit_id
-)
-  
-  SELECT guest_id, promotion_code,
-  SUM(CASE WHEN purchase_or_no = 'Made Purchase' THEN 1 ELSE 0 END) as count_of_purchase
-  FROM purchases
-  GROUP BY promotion_code
-*/
-
---creating a satisfied score for customers who provided ratings
+--4) creating a satisfied score for customers who provided ratings
 ALTER TABLE fact_ride_events ADD COLUMN satisfied_score
 
 UPDATE fact_ride_events

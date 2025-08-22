@@ -29,11 +29,13 @@ ORDER BY total_visits DESC
 
 --Q2: Visits by ticket type name
 
-SELECT dt.ticket_type_name as ticket_type, COUNT(ft.ticket_type_id) as count
+SELECT promotion_code,dt.ticket_type_name as ticket_type, COUNT(ft.ticket_type_id) as count, SUM(total_spent_dollars)
 FROM fact_visits ft
 LEFT JOIN dim_ticket dt ON  dt.ticket_type_id = ft.ticket_type_id
-GROUP BY ticket_type
+GROUP BY dt.ticket_type_name
 ORDER BY count DESC
+
+
 
 --Q3: Distribution of Wait Minutes
 
@@ -93,20 +95,3 @@ JOIN dim_date dd ON fv.date_id = dd.date_id
 GROUP BY dd.day_name
 ORDER BY avgparty_size DESC
 
-
---EDA for amount_spent per promotional offer
-
-  --joining both tables with monetary spend
-WITH purchases AS(  
-  SELECT *
-  FROM fact_visits fv
-  LEFT JOIN fact_purchases fp ON fv.visit_id = fp.visit_id
-)
-  --adding amount_cents_clean to spend_cents_clean
-  SELECT promotion_code, count(guest_id) as total_guests,SUM(amount_cents_clean) + SUM(spend_cents_clean) as total_spent,
-  (SUM(amount_cents_clean) + SUM(spend_cents_clean))/count(guest_id) as spent_per_customer
-  FROM purchases
-  WHERE promotion_code IS NOT NULL
-  GROUP BY promotion_code
-
-  --those without a promotional_code spent more than SUMMER25 and VIPDAY customers

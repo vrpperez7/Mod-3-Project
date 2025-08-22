@@ -1,15 +1,20 @@
 -- 1) 
 WITH daily_performance AS(
-  SELECT fv.visit_date as visit_day, d.day_name as day_of_week, SUM(fv.party_size) as total_visits, SUM(fv.spend_cents_clean)/100.0 as daily_spend_dollars
+  SELECT fv.visit_date as visit_day, 
+         d.day_name as day_of_week, 
+         SUM(fv.party_size) as total_visits,
+         SUM(fv.spend_cents_clean)/100.0 as daily_spend_dollars
   FROM fact_visits fv
   JOIN dim_date d ON d.date_id = fv.date_id
   GROUP BY visit_day
 )
   --adding running totals of visists and revenue
-  SELECT visit_day, day_of_week, total_visits,
-        SUM(total_visits) OVER (ORDER BY visit_day ASC) as running_total_guest,
-        ROUND(daily_spend_dollars, 2) as daily_spend,
-        SUM(ROUND(daily_spend_dollars,2)) OVER (ORDER BY visit_day ASC) as running_total_revenue
+  SELECT visit_day, 
+         day_of_week, 
+         total_visits,
+         SUM(total_visits) OVER (ORDER BY visit_day ASC) as running_total_guest,
+         ROUND(daily_spend_dollars, 2) as daily_spend,
+         SUM(ROUND(daily_spend_dollars,2)) OVER (ORDER BY visit_day ASC) as running_total_revenue
   FROM daily_performance
 
   -- top 3 days sre Sunday, Monday, and Saturday
@@ -63,17 +68,11 @@ WITH lag as(
     FROM delta
     WHERE deltacol IS NOT NULL AND previous_promotion IS NOT NULL
 
-  
-
-SELECT *
-FROM fact_visits fv
-FULL OUTER JOIN fact_purchases fp ON fp.visit_id = fv.visit_id
-WHERE ((fv.spend_cents_clean IS NULL) OR (fv.spend_cents_clean is 0)) AND (fp.purchase_id IS NULL)
-
 -- 4) ticket switching 
 
 WITH ticket AS (
-      SELECT fv.guest_id, dd.day_name as day, dt.ticket_type_id, dt.ticket_type_name,
+      SELECT fv.guest_id, dd.day_name as day, dt.ticket_type_name,
+      --calculates first ticket type per guest_id
       FIRST_VALUE(dt.ticket_type_name) OVER (PARTITION BY guest_id) as first_ticket,
       dt.base_price_cents,
       FIRST_VALUE(dt.base_price_cents) OVER (PARTITION BY guest_id) AS first_ticket_price
@@ -91,3 +90,20 @@ JOIN dim_date dd ON fv.date_id = dd.date_id
     SELECT ticket_type_name as first_ticket_type,base_price_cents, change, COUNT(*) as tickets
     FROM ticket_question
     GROUP BY change, ticket_type_name
+
+--  column for made purchase or did not make purchase by checking if primary key (purchase_id) is null.
+  --utilizing CTE for easier legibility after joins and cases
+WITH purchases AS(  
+  SELECT *,
+  CASE WHEN fp.purchase_id IS NULL THEN 'No Purchase'
+  ELSE 'Made Purchase'
+  END AS purchase_or_no
+  FROM fact_visits fv
+  INNER JOIN fact_purchases fp ON fv.visit_id = fp.visit_id
+)
+  
+  SELECT guest_id, promotion_code,
+  SUM(CASE WHEN purchase_or_no = 'Made Purchase' THEN 1 ELSE 0 END) as count_of_purchase
+  FROM purchases
+  WHERE promotion_code IS NOT NULL
+  GROUP BY promotion_code

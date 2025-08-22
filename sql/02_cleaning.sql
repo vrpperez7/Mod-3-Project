@@ -28,6 +28,7 @@ HAVING COUNT(*)>1
 ORDER BY dup DESC;
 
 -- Shows second record of columns that are duplicated
+-- returns none after erased
 SELECT *
 FROM fact_ride_events
 WHERE rowid NOT IN (
@@ -115,7 +116,17 @@ WHERE attraction_id = '6'
 UPDATE fact_ride_events
 SET attraction_id = '2'
 WHERE attraction_id = '7'
+
+--removing attraction_id 6 as it was a dup
+DELETE FROM dim_attraction
+WHERE attraction_id = '6'
+
   
+--removing attraction_id 7 as it was a dup
+
+DELETE FROM dim_attraction
+WHERE attraction_id = '7'
+
 --removing duplicate rows in fact_ride_event (8 rows have the same values in all rows)
 DELETE FROM fact_ride_events
 WHERE rowid NOT IN (
