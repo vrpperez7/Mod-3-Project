@@ -107,16 +107,20 @@ Joining our purchase table with our fact_visits table in a CTE allowed for match
 <img width="390" height="176" alt="Screenshot 2025-08-22 at 4 36 05 PM" src="https://github.com/user-attachments/assets/0222749a-1fe9-4f75-b6c2-e6d1b67aa5a1" />
 <img width="256" height="125" alt="Screenshot 2025-08-22 at 5 03 09 PM" src="https://github.com/user-attachments/assets/42072b4a-5133-4bce-b85b-1db1b1f16254" />
 
-This goes against the early campaigns mentioned by our **Marketing Director,** although promotions are driving up attendance, they're also make the most purchases (50) compared to those without a promotional offer (4).
+- Guests with promotional offers make the most purchases. (50)
+- Guests without promotional offers purchase the least. (4)
 
 ### Visuals
 
 <img width="500" height="396" alt="Screenshot 2025-08-22 at 5 24 10 PM" src="https://github.com/user-attachments/assets/7697beff-0a95-48c8-8aca-67bbdb273662" />
 
-This pie chart represents the percentages of which promotional offer category makes the most purchases. We can see the SUMMER25 offer provides the bulk of purchases (72.2%) within our purchase table, with VIPDAY second(20.4). This suggests that promotional offers create opportunities for making purchases outside of the original payment to get into the park. </br>
+This pie chart represents the percentages of which promotional offer category makes the most purchases. 
+- We can see the SUMMER25 offer provides the bulk of purchases (72.2%) within our purchase table,
+- VIPDAY second highest percentages (20.4).
+This suggests that promotional offers create opportunities for making purchases outside of the base payment to get into the park. </br>
 
 # Final Recommendations:
-As we were able to find out in our analysis,
+As we were able to find out in our analysis, </br>
 1. There is a necessity to improve wait times all around for Supernova Theme Park, but the Water category is most affected.
    - Have mechanical support on site in case of any ride issues.
    - Provide queues to for rides to alert guests 10-15 before their turn.
@@ -127,3 +131,9 @@ As we were able to find out in our analysis,
 3. For our Park General Manager, avoid customer churn by:
    - Asking for feedback from guests with the lowest average rating.
    - Drive engagement through advertisements for more guests.
+
+### Data Cleaning
+- 8 Duplicate values removed within fact_ride_events
+- Removing 2 Attraction_ID from dim_attractions as they were duplicates of "Galaxy Coaster" and "Pirate Splash!"
+- Adjusting all references to Attraction_ID 6 and 7 to 1 and 2 respectively, as they referenced the same ride.
+- Fixing casing and trimming whitespace for all values within tables.
