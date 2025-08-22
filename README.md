@@ -55,7 +55,7 @@ To find insights for all three of our stakeholders, I did some aggregations on w
 
 I looked to aggregate the mean of satisfaction_rating per attraction_name by utilizing the dim_attraction table and joining the fact_ride_events table. </br>
 
-
+<img width="286" height="211" alt="Screenshot 2025-08-22 at 3 01 46 PM" src="https://github.com/user-attachments/assets/fd4b6929-ea10-4c9f-9fa4-729c7177c905" />
 
 This aggregation showed me a lot about how customers felt about each attraction.
 
