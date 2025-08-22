@@ -92,9 +92,9 @@ Graphs
 Not only did the Water category of rides have the highest amount of visits between all ride categories (25), it also had the highest average wait time per ride (49.12) and lowest average rating (2.72). This could be a cause for concern to our **Operations Director.** </br>
 
 To further inspect transactions and promotional offers, I looked in the fact_purchases table. </br>
-Joining our purchase table with our fact_visits table allowed for matching of visit_id's and pinpoint how many purchases were made by guests with promotional offers. I then grouped and found more insights of how many purchases were made by each promotional offer category. </br>
+Joining our purchase table with our fact_visits table in a CTE allowed for matching of visit_id's and pinpoint how many purchases were made by guests with promotional offers. I then grouped and found more insights of how many purchases were made by each promotional offer category. </br>
 
-Table & graphs
+<img width="390" height="176" alt="Screenshot 2025-08-22 at 4 36 05 PM" src="https://github.com/user-attachments/assets/0222749a-1fe9-4f75-b6c2-e6d1b67aa5a1" />
 
 This goes against the early campaigns mentioned by our **Marketing Director,** although promotions are driving up attendance, they're also make the most purchases compared to those without a promotional offer.
 
