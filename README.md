@@ -80,7 +80,7 @@ This allowed me to make a count for attraction ride categories and further provi
 
 Utilizing my new column allowed me to see the top 5 most frequently rated were unsatisfied/moderately satisfied. Of which, two were the 'Water' category.
 
-## Full Analysis (Utilizing JOINS, CTES, and WINDOW FUNCTIONS)
+## Analysis for Operations Manager
 
 The original aggregation of satisfaction_rating showed me a lot about how customers felt for the water attractions. </br>
 Interestingly enough, the water category had two of the lowest satisfaction_ratings, so I dove deeper into the categories and found out more about waiting times. </br>
@@ -89,6 +89,13 @@ Interestingly enough, the water category had two of the lowest satisfaction_rati
 <img width="414" height="151" alt="Screenshot 2025-08-22 at 3 19 08 PM" src="https://github.com/user-attachments/assets/77e64cf4-dec9-4860-85dd-170cc7c00e4a" />
 
 Not only did the Water category of rides have the highest amount of visits between all ride categories (25), it also had the highest average wait time per ride (49.12) and lowest average rating (2.72). This could be a cause for concern to our **Operations Director.** </br>
+
+### Visuals:
+
+<img width="451" height="479" alt="Screenshot 2025-08-22 at 5 14 47 PM" src="https://github.com/user-attachments/assets/ea349cff-c196-4a25-9d1e-28afc36422d3" />
+<img width="453" height="487" alt="Screenshot 2025-08-22 at 5 14 10 PM" src="https://github.com/user-attachments/assets/b9e18b12-bae8-42e1-ace0-1cfcaf8bb681" />
+
+On these graphs, we can see that Kids rides have the lowest average wait time and the best guest rating, suggesting that reducing wait times leads to better ratings. Something to think about for both our **Park General Manager** and our **Operations Director**.
 
 To further inspect transactions and promotional offers, I looked in the fact_purchases table. </br>
 Joining our purchase table with our fact_visits table in a CTE allowed for matching of visit_id's and pinpoint how many purchases were made by guests with promotional offers. I then grouped and found more insights of how many purchases were made by each promotional offer category. </br>
