@@ -73,12 +73,13 @@ I engineered a new column, 'satisfaction_score', to categorize satisfaction_rati
 - satisfaction_rating = 4 is 'Moderately Satisfied'
 - satisfaction_rating < 4 is 'Unsatisfied'
 
-This allowed me to make a count for attraction ride categories and further provide insight of customer dissatisfaction. </br>
+This allows me to make a count for attraction ride categories and further provide insight of customer dissatisfaction. For example, we can tell which rides are negatively or positively affecting overall satisfaction. </br>
+This can lead to more data in the future regarding reach out to unsatisfied or moderatiley satisfied guests for feedback. </br>
+
 
 <img width="289" height="185" alt="Screenshot 2025-08-22 at 3 55 49 PM" src="https://github.com/user-attachments/assets/68f83ab2-9648-4224-99f4-6462bf0c4b49" />
 
-Utilizing my new column allowed me to see the top 5 most frequently rated were unsatisfied/moderately satisfied. Of which, two were the 'Water' category.
-
+I utilized my new feature to see the top 5 most frequently rated were unsatisfied/moderately satisfied. Of which, two were the 'Water' category. </br>
 # __Insights and Recommendations__
 
 ## Analysis for Operations Director
@@ -116,7 +117,7 @@ Joining our purchase table with our fact_visits table in a CTE allowed for match
 This pie chart represents the percentages of which promotional offer category makes the most purchases. 
 - We can see the SUMMER25 offer provides the majority of purchases (72.2%) within our purchase table,
 - VIPDAY second highest percentages (20.4).
-This suggests that promotional offers create opportunities for making purchases outside of the base payment to get into the park. </br>
+This suggests that promotional offers create opportunities for making purchases outside of the base payment to get into the park. This could be because of less expenses while entering the park, creating opportunity for purchases. </br>
 
 # Final Recommendations:
 As we were able to find out in our analysis, </br>
