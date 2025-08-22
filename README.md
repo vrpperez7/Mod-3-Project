@@ -80,6 +80,8 @@ This allowed me to make a count for attraction ride categories and further provi
 
 Utilizing my new column allowed me to see the top 5 most frequently rated were unsatisfied/moderately satisfied. Of which, two were the 'Water' category.
 
+# __Insights and Recommendations__
+
 ## Analysis for Operations Manager
 
 The original aggregation of satisfaction_rating showed me a lot about how customers felt for the water attractions. </br>
@@ -97,12 +99,31 @@ Not only did the Water category of rides have the highest amount of visits betwe
 
 On these graphs, we can see that Kids rides have the lowest average wait time and the best guest rating, suggesting that reducing wait times leads to better ratings. Something to think about for both our **Park General Manager** and our **Operations Director**.
 
+## Analysis for Marketing Director
+
 To further inspect transactions and promotional offers, I looked in the fact_purchases table. </br>
 Joining our purchase table with our fact_visits table in a CTE allowed for matching of visit_id's and pinpoint how many purchases were made by guests with promotional offers. I then grouped and found more insights of how many purchases were made by each promotional offer category. </br>
 
 <img width="390" height="176" alt="Screenshot 2025-08-22 at 4 36 05 PM" src="https://github.com/user-attachments/assets/0222749a-1fe9-4f75-b6c2-e6d1b67aa5a1" />
 <img width="256" height="125" alt="Screenshot 2025-08-22 at 5 03 09 PM" src="https://github.com/user-attachments/assets/42072b4a-5133-4bce-b85b-1db1b1f16254" />
 
-This goes against the early campaigns mentioned by our **Marketing Director,** although promotions are driving up attendance, they're also make the most purchases compared to those without a promotional offer.
+This goes against the early campaigns mentioned by our **Marketing Director,** although promotions are driving up attendance, they're also make the most purchases (50) compared to those without a promotional offer (4).
 
-# Final Recommendations
+### Visuals
+
+<img width="500" height="396" alt="Screenshot 2025-08-22 at 5 24 10 PM" src="https://github.com/user-attachments/assets/7697beff-0a95-48c8-8aca-67bbdb273662" />
+
+This pie chart represents the percentages of which promotional offer category makes the most purchases. We can see the SUMMER25 offer provides the bulk of purchases (72.2%) within our purchase table, with VIPDAY second(20.4). This suggests that promotional offers create opportunities for making purchases outside of the original payment to get into the park. </br>
+
+# Final Recommendations:
+As we were able to find out in our analysis,
+1. There is a necessity to improve wait times all around for Supernova Theme Park, but the Water category is most affected.
+   - Have mechanical support on site in case of any ride issues.
+   - Provide queues to for rides to alert guests 10-15 before their turn.
+   - More staff to help facilitate set up for rides and avoid time being wasted.
+2. Continue promotional offers, as they drives more attendance and provides for more purchases outside of base ticket cost.
+   - Continue promotional offers during fall/winter seasons.
+   - Reach out to guests who appeared most frequently to the park to drive future engagement.
+3. For our Park General Manager, avoid customer churn by:
+   - Asking for feedback from guests with the lowest average rating.
+   - Drive engagement through advertisements for more guests.
