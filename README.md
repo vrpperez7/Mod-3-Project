@@ -64,5 +64,10 @@ Interestingly enough, the water category had two of the lowest satisfaction_rati
 
 <img width="414" height="151" alt="Screenshot 2025-08-22 at 3 19 08 PM" src="https://github.com/user-attachments/assets/77e64cf4-dec9-4860-85dd-170cc7c00e4a" />
 
-Not only did the Water category of rides have the highest amount of visits between all ride categories, it also had the highest average wait time per ride and lowest average rating. This could be a cause for concern to our **Operations Director**
+Not only did the Water category of rides have the highest amount of visits between all ride categories (25), it also had the highest average wait time per ride (49.12) and lowest average rating (2.72). This could be a cause for concern to our **Operations Director.**
 
+Then, I checked to see the frequency of our total guests (47) that utilized promotional codes.
+
+
+
+I was able to find out that, of the guests that we had records of utilizing/not utilizing codes (40/47), most of them did use promotional offers (33). This supports our **Marketing Director's** claim of "Promotional Codes drive attendance", we'll check further of how this impacts Supernova monetarily.
