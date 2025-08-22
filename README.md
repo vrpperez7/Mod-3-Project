@@ -59,15 +59,30 @@ I looked to aggregate the mean of satisfaction_rating per attraction_name by uti
 
 <img width="286" height="211" alt="Screenshot 2025-08-22 at 3 01 46 PM" src="https://github.com/user-attachments/assets/fd4b6929-ea10-4c9f-9fa4-729c7177c905" />
 
-This aggregation showed me a lot about how customers felt for each attraction. </br>
-Interestingly enough, the water category had two of the lowest satisfaction_ratings, so I delved deeper into the categories and found out more about waiting times. </br>
-
-<img width="414" height="151" alt="Screenshot 2025-08-22 at 3 19 08 PM" src="https://github.com/user-attachments/assets/77e64cf4-dec9-4860-85dd-170cc7c00e4a" />
-
-Not only did the Water category of rides have the highest amount of visits between all ride categories (25), it also had the highest average wait time per ride (49.12) and lowest average rating (2.72). This could be a cause for concern to our **Operations Director.**
-
 Then, I checked to see the frequency of our total guests (47) that utilized promotional codes.
 
 <img width="205" height="125" alt="Screenshot 2025-08-22 at 3 29 07 PM" src="https://github.com/user-attachments/assets/2f0592db-7db5-4fd7-be3f-e1e987466e42" />
 
 I was able to find out that, of the guests that we had records of utilizing/not utilizing codes (40/47), most of them did use promotional offers (33). This supports our **Marketing Director's** claim of "Promotional Codes drive attendance", we'll check further of how this impacts Supernova monetarily.
+
+## FEATURE ENGINEERING
+
+I created a column to categorize satisfaction_rating called satisfaction_score where:
+- satisfaction_rating = 5 is 'Satisfied'
+- satisfaction_rating = 4 is 'Moderately Satisfied'
+- satisfaction_rating < 4 is 'Unsatisfied'
+
+This allowed me to make a count for attraction ride categories and further provide insight of how unhappy customers were. </br>
+
+
+
+Utilizing my new column allowed me to see the top 5 most frequently rated were unsatisfied/moderately satisfied. Of which, two were of the 'Water' category.
+
+The original aggregation of satisfaction_rating showed me a lot about how customers felt for each attraction. </br>
+Interestingly enough, the water category had two of the lowest satisfaction_ratings, so I delved deeper into the categories and found out more about waiting times. </br>
+
+I created a wait_minutes column in the fact_ride_event
+
+<img width="414" height="151" alt="Screenshot 2025-08-22 at 3 19 08 PM" src="https://github.com/user-attachments/assets/77e64cf4-dec9-4860-85dd-170cc7c00e4a" />
+
+Not only did the Water category of rides have the highest amount of visits between all ride categories (25), it also had the highest average wait time per ride (49.12) and lowest average rating (2.72). This could be a cause for concern to our **Operations Director.**
