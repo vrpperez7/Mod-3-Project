@@ -20,17 +20,17 @@
 ## My stakeholders are:
 
 ### <ins>Primary Stakeholder</ins>
-Park General Manager's Concerns Are </br>
+***Park General Manager's*** concerns are: </br>
 - Unhappy with previous two quarters </br>
 - Upset with fluctuating revenue streams </br>
 - Uneven guest satisfaction scores </br>
 
 ### <ins>Supporting Stakeholders</ins> </br>
-Operations Director Concerns Include </br>
+***Operations Director's** concerns include: </br>
 - Inconsistent ride availability due to maintenance. </br>
 - Long wait times for popular attractions. </br>
 
-Marketing Director's Concerns </br>
+**Marketing Director's** concerns: </br>
 - Early campaigns say discount packages drive up attendance of price-sensitive guests.
 
 # So Let's Approach Our Scenario!
