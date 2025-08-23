@@ -117,7 +117,7 @@ Not only did the Water category of rides have the highest number of visits betwe
 
 ### Visuals:
 
-![bar chart for average rating per category](/visuals/ratepercat.png "Average Rating")
+![bar chart for average rating per category](/figures/ratepercat.png "Average Rating")
 <img width="453" height="487" alt="Screenshot 2025-08-22 at 5 14 10 PM" src="https://github.com/user-attachments/assets/b9e18b12-bae8-42e1-ace0-1cfcaf8bb681" />
 
 On these graphs, we can see that Kids rides have the lowest average wait time and the best guest rating, suggesting that reducing wait times may lead to improved ratings. Something to think about for both our **Park General Manager** and our **Operations Director**.
