@@ -9,7 +9,7 @@
 - [Feature Engineering](#FEATURE-ENGINEERING)
 - [Operations Director Analysis & Visuals](#analysis-for-operations-director)
 - [Marketing Director Analysis & Visuals](#analysis-for-marketing-director)
-- [Final Recommendations](#final-recommendations)
+- [Final Recommendations](#final-recommendations-for-next-quarter)
 - [Ethics and Biases](#ethics-and-biases)
 - [Repo Navigation](#repo-navigation)
 
@@ -167,7 +167,7 @@ This pie chart represents the percentages of which promotional offer category ma
 - VIPDAY second highest percentages (20.4).
 This suggests that promotional offers create opportunities for making purchases outside of the base payment to get into the park. This could be because of less expenses while entering the park, creating opportunity for purchases. </br>
 
-# Final Recommendations:
+# Final Recommendations for Next Quarter:
 As we were able to find out in the analysis, </br>
 1. **Operations Director:** There is a necessity to improve wait times all around for Supernova Theme Park, but the Water category is most affected.
    - Have mechanical support on site in case of any ride issues.
