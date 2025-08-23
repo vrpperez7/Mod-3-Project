@@ -188,7 +188,7 @@ As we were able to find out in our analysis, </br>
 - Fixing casing and trimming whitespace for all values within tables.
 </br>
 **Data Biases**
-
+</br>
 - All data is referring 10 guests, could have a skew in rating because of it.
 - Data only referencing a week, more data could provide different analysis.
 - Many NULL values within records, had to proceed without imputation by ignoring NULLs.
