@@ -17,7 +17,7 @@
 
 ### My client, Supernova Theme Park, has hired me to do a cross-departmental plan for the Operations and Marketing team. They would like strategies for the next quarter to improve operational effeciency, guest experience, and market effectiveness and have provided me with Supernova Theme Park’s data to analyze and create insights.
 
-## My stakeholders are:
+## The stakeholders are:
 
 ### <ins>Primary Stakeholder</ins>
 ***Park General Manager's*** concerns are: </br>
@@ -33,7 +33,7 @@
 **Marketing Director's** concerns: </br>
 - Early campaigns say discount packages drive up attendance of price-sensitive guests.
 
-# So Let's Approach Our Scenario!
+# So Let's Approach The Scenario!
 
 ## The Database and Schema:
 
@@ -50,21 +50,21 @@ Some benefits are:
 - Easier to merge tables when fact table is common between dimension tables
 - Easier to read
 
-### Our Database has 7 Tables
+### The Database has 7 Tables
 
 __4 Dimension Tables:__ </br>
-- dim_attraction : includes all unique attractions at Supernova
-- dim_date : includes all unique dates of our database
-- dim_guest : includes all guests and their contact information
-- dim_ticket : includes all ticket types and their pricing
+- ```dim_attraction``` : includes all unique attractions at Supernova
+- ```dim_date``` : includes all unique dates of the database
+- ```dim_guest``` : includes all guests and their contact information
+- ```dim_ticket``` : includes all ticket types and their pricing
 __3 Fact Tables:__ </br>
-- fact_purchases : all instances of guest purchases made during a visit at Supernova
-- fact_ride_events : all details of rides during a visit
-- fact_visits : all separate visits a guest has done
+- ```fact_purchases``` : all instances of guest purchases made during a visit at Supernova
+- ```fact_ride_events``` : all details of rides during a visit
+- ```fact_visits``` : all separate visits a guest has done
 
 ## Exploratory Data Analysis
 
-To find insights, I aggregated on important columns for my stakeholders. </br>
+To find insights, I aggregated on important columns for the stakeholders. </br>
 
 To tackle the **Park General Manager's** concern of rating scores, I checked for satisfaction_ratings. </br>
 
@@ -74,11 +74,11 @@ I calculated the average satisfaction_rating per attraction_name by using the di
 
 This aggregation of satisfaction_rating showed me a lot about on how customers felt about the attractions. </br>
 
-Then, I checked to see the frequency of our total guests (47) that utilized promotional codes.
+Then, I checked to see the frequency of total guests (47) that utilized promotional codes.
 
 <img width="205" height="125" alt="Screenshot 2025-08-22 at 3 29 07 PM" src="https://github.com/user-attachments/assets/2f0592db-7db5-4fd7-be3f-e1e987466e42" />
 
-Of the 40 guests with promo code data, most of them (33) used promotional offers. This supports our **Marketing Director's** claim of "Promotional Codes drive attendance".
+Of the 40 guests with promo code data, most of them (33) used promotional offers. This supports the **Marketing Director's** claim of "Promotional Codes drive attendance".
 
 ## FEATURE ENGINEERING
 
@@ -105,7 +105,7 @@ This can lead to more data in the future regarding reach out to unsatisfied or m
 
 <img width="289" height="185" alt="Screenshot 2025-08-22 at 3 55 49 PM" src="https://github.com/user-attachments/assets/68f83ab2-9648-4224-99f4-6462bf0c4b49" />
 
-I utilized my new feature to see the top 5 most frequently rated were unsatisfied/moderately satisfied. Of which, two were the 'Water' category. </br>
+I utilized the new feature to see the top 5 most frequently rated were unsatisfied/moderately satisfied. Of which, two were the 'Water' category. </br>
 # __Insights and Recommendations__
 
 ## Analysis for Operations Director
@@ -132,12 +132,12 @@ Not only did the Water category of rides have the highest number of visits betwe
 </br>
 ![bar chart for average wait per category](/figures/waitpercat.png "Average Wait")
 </br>
-On these graphs, we can see that Kids rides have the lowest average wait time and the best guest rating, suggesting that reducing wait times may lead to improved ratings. Something to think about for both our **Park General Manager** and our **Operations Director**.
+On these graphs, we can see that Kids rides have the lowest average wait time and the best guest rating, suggesting that reducing wait times may lead to improved ratings. Something to think about for both the **Park General Manager** and the **Operations Director**.
 
 ## Analysis for Marketing Director
 
 To further inspect transactions and promotional offers, I looked in the fact_purchases table. </br>
-Joining our purchase table with our fact_visits table in a CTE allowed for matching of visit_id and pinpoint how many purchases were made by guests with promotional offers. I then grouped and found more insights of how many purchases were made by each promotional offer category. </br>
+Joining the fact_purchase table with the fact_visits table in a CTE allowed for matching of visit_id and pinpoint how many purchases were made by guests with promotional offers. I then grouped and found more insights of how many purchases were made by each promotional offer category. </br>
 
 ```
 --cte for join of fact purchases and fact_visits
@@ -163,12 +163,12 @@ Joining our purchase table with our fact_visits table in a CTE allowed for match
 ![pie chart with purchase percentages](/figures/piepercent.png "Payment Percentages")
 </br>
 This pie chart represents the percentages of which promotional offer category makes the most purchases. 
-- We can see the SUMMER25 offer provides the majority of purchases (72.2%) within our purchase table,
+- We can see the SUMMER25 offer provides the majority of purchases (72.2%) within the purchase table,
 - VIPDAY second highest percentages (20.4).
 This suggests that promotional offers create opportunities for making purchases outside of the base payment to get into the park. This could be because of less expenses while entering the park, creating opportunity for purchases. </br>
 
 # Final Recommendations:
-As we were able to find out in our analysis, </br>
+As we were able to find out in the analysis, </br>
 1. **Operations Director:** There is a necessity to improve wait times all around for Supernova Theme Park, but the Water category is most affected.
    - Have mechanical support on site in case of any ride issues.
    - Provide queues for rides to alert guests 10-15 before their turn.
