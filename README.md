@@ -76,7 +76,17 @@ I engineered a new column, 'satisfaction_score', to categorize satisfaction_rati
 - satisfaction_rating = 4 is 'Moderately Satisfied'
 - satisfaction_rating < 4 is 'Unsatisfied'
 
-<img width="505" height="138" alt="Screenshot 2025-08-22 at 8 02 26 PM" src="https://github.com/user-attachments/assets/b59bbebf-a6f0-455e-910e-565a9d7a722f" />
+```
+ALTER TABLE fact_ride_events ADD COLUMN satisfied_score
+
+UPDATE fact_ride_events
+SET satisfied_score =
+    CASE WHEN satisfaction_rating = 5 THEN 'Satisfied'
+         WHEN satisfaction_rating = 4 THEN 'Moderately Satisfied'
+         WHEN satisfaction_rating < 4 THEN 'Unsatisfied'
+         ELSE null
+         END
+```
 
 This allows me to make a count for attraction ride categories and further provide insight of customer dissatisfaction. For example, we can tell which rides are negatively or positively affecting overall satisfaction. </br>
 This can lead to more data in the future regarding reach out to unsatisfied or moderatiley satisfied guests for feedback. </br>
