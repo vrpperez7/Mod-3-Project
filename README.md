@@ -127,7 +127,20 @@ On these graphs, we can see that Kids rides have the lowest average wait time an
 To further inspect transactions and promotional offers, I looked in the fact_purchases table. </br>
 Joining our purchase table with our fact_visits table in a CTE allowed for matching of visit_id and pinpoint how many purchases were made by guests with promotional offers. I then grouped and found more insights of how many purchases were made by each promotional offer category. </br>
 
-<img width="390" height="176" alt="Screenshot 2025-08-22 at 4 36 05 PM" src="https://github.com/user-attachments/assets/0222749a-1fe9-4f75-b6c2-e6d1b67aa5a1" />
+```
+--cte for join of fact purchases and fact_visits
+  WITH promopurchase AS (
+  SELECT *
+  FROM fact_purchases fp
+  JOIN fact_visits fv ON fv.visit_id = fp.visit_id
+)
+--promotion code is not null refers to guests who have made purchases,
+  SELECT promotion_code,
+         COUNT(*) as count_of_purchases
+  FROM promopurchase
+  WHERE promotion_code IS NOT NULL
+  GROUP BY promotion_code
+```
 <img width="256" height="125" alt="Screenshot 2025-08-22 at 5 03 09 PM" src="https://github.com/user-attachments/assets/42072b4a-5133-4bce-b85b-1db1b1f16254" />
 
 - Guests with promotional offers make the most purchases. (50)
