@@ -1,6 +1,17 @@
 # Theme Park Analysis
 
-### by Vincent Perez
+### by [Vincent Perez](https://www.linkedin.com/in/thevinceperez/)
+
+## Table of Contents
+- [Business Problem & Stakeholders](#business-problem)
+- [Database Info](#the-database-and-schema)
+- [Exploratory Data Analysis](#eda(SQL))
+- [Feature Engineering](feature-engineering)
+- [Operations Director Analysis & Visuals](#analysis-for-operations-director)
+- [Marketing Director Analysis & Visuals](#analysis-for-marketing-director)
+- [Final Recommendations](#final-recommendations)
+- [Ethics and Biases](#ethics-and-biases)
+- [Repo Navigation](#repo-navigaition)
 
 # Business Problem:
 
@@ -199,5 +210,3 @@ As we were able to find out in our analysis, </br>
 |------wiring.sql
 |--README.md
 ```
-## Linkedin:
-https://www.linkedin.com/in/thevinceperez/
