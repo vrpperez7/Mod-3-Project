@@ -185,7 +185,7 @@ As we were able to find out in our analysis, </br>
 - 8 Duplicate values removed within fact_ride_events
 - Removing 2 Attraction_ID from dim_attractions as they were duplicates of "Galaxy Coaster" and "Pirate Splash!"
 - Adjusting all references to Attraction_ID 6 and 7 to 1 and 2 respectively, as they referenced the same ride.
-- Fixing casing and trimming whitespace for all values within tables.
+- Fixing casing and trimming whitespace for all values within tables. </br>
 **Data Biases**
 - All data is referring 10 guests, could have a skew in rating because of it.
 - Data only referencing a week, more data could provide different analysis.
