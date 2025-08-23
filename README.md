@@ -5,8 +5,8 @@
 ## Table of Contents
 - [Business Problem & Stakeholders](#business-problem)
 - [Database Info](#the-database-and-schema)
-- [Exploratory Data Analysis](#EDA(SQL))
-- [Feature Engineering](FEATURE-ENGINEERING)
+- [Exploratory Data Analysis](#exploratory-data-analysis))
+- [Feature Engineering](#FEATURE-ENGINEERING)
 - [Operations Director Analysis & Visuals](#analysis-for-operations-director)
 - [Marketing Director Analysis & Visuals](#analysis-for-marketing-director)
 - [Final Recommendations](#final-recommendations)
@@ -62,7 +62,7 @@ __3 Fact Tables:__ </br>
 - fact_ride_events : all details of rides during a visit
 - fact_visits : all separate visits a guest has done
 
-## EDA(SQL)
+## Exploratory Data Analysis
 
 To find insights, I aggregated on important columns for my stakeholders. </br>
 
