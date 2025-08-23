@@ -180,6 +180,23 @@ As we were able to find out in our analysis, </br>
 - Many NULL values within records, had to proceed without imputation by ignoring NULLs.
 
 REPO NAVIGATION
-[Link Text](#business-problem)
+```
+--data/
+------themepark.db
+--figures/
+-------piepercent.png
+-------ratepercat.png
+-------waitpercat.png
+---notebooks/
+-------plots.ipynb
+---sql\
+-------01_eda.sql
+-------02_cleaning.sql
+-------03_features.sql
+-------04_ctes_windows.sql
+-------04_extra_queries.sql
+-------wiring.sql
+--README.md
+```
 ## Linkedin:
 https://www.linkedin.com/in/thevinceperez/
