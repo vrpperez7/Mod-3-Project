@@ -149,7 +149,7 @@ Joining our purchase table with our fact_visits table in a CTE allowed for match
 
 ### Visuals
 
-![pie chart with purchase percentages](/figures/paypercent "Payment Percentages")
+![pie chart with purchase percentages](/figures/piepercent "Payment Percentages")
 This pie chart represents the percentages of which promotional offer category makes the most purchases. 
 - We can see the SUMMER25 offer provides the majority of purchases (72.2%) within our purchase table,
 - VIPDAY second highest percentages (20.4).
@@ -178,6 +178,7 @@ As we were able to find out in our analysis, </br>
 - All data is referring 10 guests, could have a skew in rating because of it.
 - Data only referencing a week, more data could provide different analysis.
 - Many NULL values within records, had to proceed without imputation by ignoring NULLs.
+
 
 ## Linkedin:
 https://www.linkedin.com/in/thevinceperez/
