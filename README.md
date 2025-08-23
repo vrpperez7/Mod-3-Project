@@ -29,6 +29,8 @@ Marketing Director's Concerns </br>
 ### We are working with a Star Schema 
 Put simply, a __star schema__ is when a central fact table references multiple dimensions tables. </br>
 
+<img width="698" height="326" alt="Star-schema" src="https://github.com/user-attachments/assets/5aaafdc8-d5d0-4ccf-91fc-d0cd25e9fba2" />
+
 A _dimension table_ contains all unique instances, is usually very verbose, and is usually grouped. </br>
 
 A _fact table_ usually refers to events in the real world, contains measures for the foreign keys associated to the primary key in a dimension table, and sometimes includes date/time stamps. </br>
