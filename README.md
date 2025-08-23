@@ -119,7 +119,8 @@ Not only did the Water category of rides have the highest number of visits betwe
 
 ![bar chart for average rating per category](/figures/ratepercat.png "Average Rating")
 </br>
-![bar chart for average wait per category](/figures/waitpercat.png "Average Wait"]
+![bar chart for average wait per category](/figures/waitpercat.png "Average Wait")
+</br>
 On these graphs, we can see that Kids rides have the lowest average wait time and the best guest rating, suggesting that reducing wait times may lead to improved ratings. Something to think about for both our **Park General Manager** and our **Operations Director**.
 
 ## Analysis for Marketing Director
@@ -148,8 +149,7 @@ Joining our purchase table with our fact_visits table in a CTE allowed for match
 
 ### Visuals
 
-<img width="500" height="396" alt="Screenshot 2025-08-22 at 5 24 10 PM" src="https://github.com/user-attachments/assets/7697beff-0a95-48c8-8aca-67bbdb273662" />
-
+![pie chart with purchase percentages](/figures/paypercent "Payment Percentages")
 This pie chart represents the percentages of which promotional offer category makes the most purchases. 
 - We can see the SUMMER25 offer provides the majority of purchases (72.2%) within our purchase table,
 - VIPDAY second highest percentages (20.4).
