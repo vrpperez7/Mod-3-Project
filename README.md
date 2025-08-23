@@ -15,7 +15,7 @@
 
 # Business Problem:
 
-### My client, Supernova Theme Park, has hired me to do a cross-departmental plan for the Operations and Marketing team who would like strategies for the next quarter to improve operational effeciency, guest experience, and market effectiveness. They have provided me with Supernova Theme Park’s data to analyze and create insights.
+### My client, Supernova Theme Park, has hired me to do a cross-departmental plan for the Operations and Marketing team. They would like strategies for the next quarter to improve operational effeciency, guest experience, and market effectiveness and have provided me with Supernova Theme Park’s data to analyze and create insights.
 
 ## My stakeholders are:
 
