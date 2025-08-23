@@ -102,7 +102,15 @@ I utilized my new feature to see the top 5 most frequently rated were unsatisfie
 The original aggregation of satisfaction_rating showed me a lot about how customers felt for the water attractions. </br>
 Interestingly enough, the water category had two of the lowest satisfaction_ratings, so I dove deeper into the categories and found out more about waiting times. </br>
 
-<img width="539" height="125" alt="Screenshot 2025-08-22 at 5 07 38 PM" src="https://github.com/user-attachments/assets/6106ff5c-ad2d-4695-82f9-709ee29b3b50" />
+```
+SELECT da.category, COUNT(fre.satisfaction_rating) as count_of_visits,
+       ROUND(AVG(fre.wait_minutes),2) as average_wait,
+       ROUND(AVG(fre.satisfaction_rating),2) as average_rating
+FROM fact_ride_events fre
+JOIN dim_attraction da ON fre.attraction_id = da.attraction_id
+WHERE fre.wait_minutes IS NOT NULL
+GROUP BY da.category
+```
 <img width="414" height="151" alt="Screenshot 2025-08-22 at 3 19 08 PM" src="https://github.com/user-attachments/assets/77e64cf4-dec9-4860-85dd-170cc7c00e4a" />
 
 Not only did the Water category of rides have the highest number of visits between all ride categories (25), it also had the highest average wait time per ride (49.12) and lowest average rating (2.72). This could be a cause for concern for the **Operations Director.** </br>
