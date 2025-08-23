@@ -150,6 +150,7 @@ Joining our purchase table with our fact_visits table in a CTE allowed for match
 ### Visuals
 
 ![pie chart with purchase percentages](/figures/piepercent.png "Payment Percentages")
+</br>
 This pie chart represents the percentages of which promotional offer category makes the most purchases. 
 - We can see the SUMMER25 offer provides the majority of purchases (72.2%) within our purchase table,
 - VIPDAY second highest percentages (20.4).
@@ -179,24 +180,24 @@ As we were able to find out in our analysis, </br>
 - Data only referencing a week, more data could provide different analysis.
 - Many NULL values within records, had to proceed without imputation by ignoring NULLs.
 
-REPO NAVIGATION
+### REPO NAVIGATION
 ```
---data/
-------themepark.db
---figures/
--------piepercent.png
--------ratepercat.png
--------waitpercat.png
----notebooks/
--------plots.ipynb
----sql\
--------01_eda.sql
--------02_cleaning.sql
--------03_features.sql
--------04_ctes_windows.sql
--------04_extra_queries.sql
--------wiring.sql
---README.md
+|--data/
+|-----themepark.db
+|--figures/
+|------piepercent.png
+|------ratepercat.png
+|------waitpercat.png
+|--notebooks/
+|------plots.ipynb
+|--sql\
+|------01_eda.sql
+|------02_cleaning.sql
+|------03_features.sql
+|------04_ctes_windows.sql
+|------04_extra_queries.sql
+|------wiring.sql
+|--README.md
 ```
 ## Linkedin:
 https://www.linkedin.com/in/thevinceperez/
