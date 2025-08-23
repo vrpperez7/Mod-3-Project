@@ -5,13 +5,13 @@
 ## Table of Contents
 - [Business Problem & Stakeholders](#business-problem)
 - [Database Info](#the-database-and-schema)
-- [Exploratory Data Analysis](#eda(SQL))
-- [Feature Engineering](feature-engineering)
+- [Exploratory Data Analysis](#EDA(SQL))
+- [Feature Engineering](FEATURE-ENGINEERING)
 - [Operations Director Analysis & Visuals](#analysis-for-operations-director)
 - [Marketing Director Analysis & Visuals](#analysis-for-marketing-director)
 - [Final Recommendations](#final-recommendations)
 - [Ethics and Biases](#ethics-and-biases)
-- [Repo Navigation](#repo-navigaition)
+- [Repo Navigation](#repo-navigation)
 
 # Business Problem:
 
