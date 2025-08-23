@@ -5,7 +5,7 @@
 ## Table of Contents
 - [Business Problem & Stakeholders](#business-problem)
 - [Database Info](#the-database-and-schema)
-- [Exploratory Data Analysis](#exploratory-data-analysis))
+- [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Feature Engineering](#FEATURE-ENGINEERING)
 - [Operations Director Analysis & Visuals](#analysis-for-operations-director)
 - [Marketing Director Analysis & Visuals](#analysis-for-marketing-director)
