@@ -26,7 +26,7 @@
 - Uneven guest satisfaction scores </br>
 
 ### <ins>Supporting Stakeholders</ins> </br>
-***Operations Director's** concerns include: </br>
+**Operations Director's** concerns include: </br>
 - Inconsistent ride availability due to maintenance. </br>
 - Long wait times for popular attractions. </br>
 
