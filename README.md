@@ -164,7 +164,7 @@ Joining the fact_purchase table with the fact_visits table in a CTE allowed for 
 </br>
 This pie chart represents the percentages of which promotional offer category makes the most purchases. 
 - We can see the SUMMER25 offer provides the majority of purchases (72.2%) within the purchase table,
-- VIPDAY second highest percentages (20.4).
+- VIPDAY second highest percentages (20.4). </br>
 This suggests that promotional offers create opportunities for making purchases outside of the base payment to get into the park. This could be because of less expenses while entering the park, creating opportunity for purchases. </br>
 
 # Final Recommendations for Next Quarter:
