@@ -38,7 +38,7 @@
 ## The Database and Schema:
 
 ### We are working with a Star Schema 
-Put simply, a __star schema__ is when a central fact table references multiple dimensions tables. </br>
+Simply put, a __star schema__ is when a central fact table references multiple dimensions tables. </br>
 
 <img width="698" height="326" alt="Star-schema" src="https://github.com/user-attachments/assets/5aaafdc8-d5d0-4ccf-91fc-d0cd25e9fba2" />
 
