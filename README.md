@@ -175,7 +175,7 @@ As we were able to find out in the analysis, </br>
    - Provide queues for rides to alert guests 10-15 before their turn.
    - More staff to facilitate ride set up and reduce operational delays.
 2. **Marketing Director:** Continue promotional offers, as they drive more attendance and provided for a total of 92.6% purchase rate outside of the base ticket price.
-   - Continue promotional offers during fall/winter seasons.
+   - Potential to continue promotional offers during fall and winter seasons to keep attendance high.
    - Reach out to guests who visited most frequently to the park to drive future engagement.
 3. **Park General Manager:** Avoid customer churn by:
    - Asking for feedback from guests with the lowest average rating.
