@@ -202,7 +202,7 @@ As we were able to find out in the analysis, </br>
 |------waitpercat.png
 |--notebooks/
 |------plots.ipynb
-|--sql\
+|--sql/
 |------01_eda.sql
 |------02_cleaning.sql
 |------03_features.sql
